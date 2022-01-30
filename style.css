@@ -17,6 +17,7 @@ body {
 header {
     background-color: black;
     align-self: stretch;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,17 +27,85 @@ header h1 {
     color: white;
     font-size: 54px;
     font-weight: bold;
+    /* margin-left: 25px; */
+}
+
+#main-menu-button {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 7px;
+    margin-bottom: 15px;
 }
 
 .main {
     /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.singleplayer {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.multiplayer {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu hi {
+    align-self: center;
+}
+
+.menu-item {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#singleplayer-button,
+#multiplayer-button,
+#confirm-button {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#difficultyOptions {
+    display: none;
+}
+
+/* span {
+    margin: 15px;
+} */
+
+#playerNamesInput {
+    display: none;
+}
+
+/* #confirm-button {
+    pointer-events: none;
+} */
 
 .container {
     /* border: 3px solid blue; */
     display: grid;
     position: relative;
     grid-template-columns: repeat(3, auto);
+    margin-bottom: 30px;
 }
 
 .cell {
@@ -91,4 +160,51 @@ footer {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+}
+
+
+/* --------------------------- SINGLE PLAYER -------------------------------------- */
+
+.container-ai {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, auto);
+    margin-bottom: 30px;
+}
+
+.cell-ai {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    font-size: 90px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cell-ai:nth-child(1),
+.cell-ai:nth-child(2),
+.cell-ai:nth-child(3) {
+    border-top: none;
+}
+
+.cell-ai:nth-child(3n+1){
+    border-left: none;
+}
+
+.cell-ai:nth-child(3n+3){
+    border-right: none;
+}
+
+.cell-ai:nth-child(7),
+.cell-ai:nth-child(8),
+.cell-ai:nth-child(9) {
+    border-bottom: none;
+}
+
+#myCanvas-ai {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: none;
 }

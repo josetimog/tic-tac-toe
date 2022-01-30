@@ -12,30 +12,77 @@
 
     <header>
         <h1>TIC TAC TOE</h1>
+        <button id='main-menu-button'>Main Menu</button>
     </header>
 
     <div class='main'>
-        <div class='container'>
-            <div class="cell" id='1'></div>
-            <div class="cell" id='2'></div>
-            <div class="cell" id='3'></div>
-            <div class="cell" id='4'></div>
-            <div class="cell" id='5'></div>
-            <div class="cell" id='6'></div>
-            <div class="cell" id='7'></div>
-            <div class="cell" id='8'></div>
-            <div class="cell" id='9'></div>
-            <canvas id='myCanvas' width='300' height='300'></canvas>
+        <div class='singleplayer'>
+            <div class='container-ai'>
+                <div class="cell-ai" id='1-ai'></div>
+                <div class="cell-ai" id='2-ai'></div>
+                <div class="cell-ai" id='3-ai'></div>
+                <div class="cell-ai" id='4-ai'></div>
+                <div class="cell-ai" id='5-ai'></div>
+                <div class="cell-ai" id='6-ai'></div>
+                <div class="cell-ai" id='7-ai'></div>
+                <div class="cell-ai" id='8-ai'></div>
+                <div class="cell-ai" id='9-ai'></div>
+                <canvas id='myCanvas-ai' width='300' height='300'></canvas>
+            </div>
+    
+            <div class='text-box-container-ai'>
+                <p id='text-box-ai'>Let's play Tic-Tac-Toe!</p>
+            </div>
         </div>
+
+        <div class='multiplayer'>
+            <div class='container'>
+                <div class="cell" id='1'></div>
+                <div class="cell" id='2'></div>
+                <div class="cell" id='3'></div>
+                <div class="cell" id='4'></div>
+                <div class="cell" id='5'></div>
+                <div class="cell" id='6'></div>
+                <div class="cell" id='7'></div>
+                <div class="cell" id='8'></div>
+                <div class="cell" id='9'></div>
+                <canvas id='myCanvas' width='300' height='300'></canvas>
+            </div>
+    
+            <div class='text-box-container'>
+                <p id='text-box'>Let's play Tic-Tac-Toe!</p>
+            </div>
+        </div>
+
+        <div class='main-menu'>
+            <h1>Main Menu</h1>
+            <button id='singleplayer-button' class='menu-item'>Single Player</button>
+
+            <div id='difficultyOptions'>
+                <p>Difficulty:</p>
+                <p>Easy</p>
+                <p>Medium</p>
+                <p>Hard</p>
+                <p>Impossible</p>
+            </div>
+
+            <button id='multiplayer-button' class='menu-item'>Multiplayer</button>
+
+            <div id='playerNamesInput'>
+                <p>Player 1:</p>
+                <input type='text' id='firstPlayerName'>
+                <p>Player 2:</p>
+                <input type='text' id='secondPlayerName'>
+            </div>
+
+
+            <button id='confirm-button' class='menu-item'>Confirm</button>
+        </div>
+
+
     </div>
 
-    <div class='text-box-container'>
-        <p id='text-box'>Let's play Tic-Tac-Toe!</p>
-    </div>
-
-    <!-- <canvas id='myCanvas'></canvas> -->
-
-    <button id='restart'>Replay</button>
+    <button id='restart'>New Game</button>
 
     <footer>
         <p>COPYRIGHT &copy THE ODIN PROJECT 2022</p>
